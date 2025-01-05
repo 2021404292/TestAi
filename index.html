@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>休息一下</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Microsoft YaHei', sans-serif;
+            background-color: #f0f2f5;
+        }
+        
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>需要休息一下吗？</h1>
+        <p>点击下面的按钮，让我帮你找个有趣的地方放松一下吧！</p>
+        <button onclick="redirectToRandomSite()">去放松一下</button>
+    </div>
+
+    <script>
+        function redirectToRandomSite() {
+            const sites = [
+                'https://www.bilibili.com',
+                'https://www.youtube.com',
+                'https://www.netflix.com',
+                'https://www.twitch.tv',
+                'https://www.miniclip.com',
+                'https://poki.com',
+                'https://www.crazygames.com',
+                'https://www.agame.com',
+                'https://www.disney.com',
+                'https://www.cartoonnetwork.com',
+                'https://www.9gag.com',
+                'https://www.giphy.com',
+                'https://www.reddit.com/r/funny',
+                'https://www.reddit.com/r/aww',
+                'https://www.boredpanda.com',
+                'https://theoatmeal.com',
+                'https://www.gocomics.com',
+                'https://www.kongregate.com',
+                'https://www.chess.com',
+                'https://www.coolmathgames.com'
+            ];
+            
+            const randomSite = sites[Math.floor(Math.random() * sites.length)];
+            window.location.href = randomSite;
+        }
+    </script>
+</body>
+</html> 
